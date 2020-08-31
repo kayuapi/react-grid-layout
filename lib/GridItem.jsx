@@ -326,6 +326,69 @@ export default class GridItem extends React.Component<Props, State> {
         }
         scale={this.props.transformScale}
       >
+        <g>
+          {/* <rect
+            fill="skyblue"
+            width={width}
+            height={height}
+            x={lockX ? lockX : x}
+            y={lockY ? lockY : y}
+          />
+          <text x={lockX ? lockX : x} y={lockY ? lockY : y} fill="red">
+            {id}
+          </text> */}
+          { [
+            <line
+              key="line1"
+              y1="0"
+              y2="1000"
+              // x1={lockX ? lockX : x}
+              // x2={lockX ? lockX : x}
+              x1={this.props.x}
+              x2={this.props.x}
+              style={{stroke: "lightcoral",
+              strokeWidth: 1,
+              strokeDasharray: 5.5}}
+            />,
+            <line
+              key="line2"
+              y1="0"
+              y2="1000"
+              // x1={lockX ? lockX + width : x + width}
+              // x2={lockX ? lockX + width : x + width}
+              x1={this.props.x + this.props.containerWidth}
+              x2={this.props.x + this.props.containerWidth}
+              style={{stroke: "lightcoral",
+              strokeWidth: 1,
+              strokeDasharray: 5.5}}
+            />,
+            <line
+              key="line3"
+              x1="0"
+              x2="1000"
+              // y1={lockY ? lockY + height : y + height}
+              // y2={lockY ? lockY + height : y + height}
+              y1={this.props.y + this.props.containerHeight}
+              y2={this.props.y + this.props.containerHeight}
+              style={{stroke: "lightcoral",
+              strokeWidth: 1,
+              strokeDasharray: 5.5}}
+            />,
+            <line
+              key="line4"
+              x1="0"
+              x2="1000"
+              // y1={lockY ? lockY : y}
+              // y2={lockY ? lockY : y}
+              y1={this.props.y}
+              y2={this.props.y}
+              style={{stroke: "lightcoral",
+              strokeWidth: 1,
+              strokeDasharray: 5.5}}
+            />
+          ]}
+        </g>
+
         {child}
       </DraggableCore>
     );
