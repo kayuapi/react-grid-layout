@@ -337,7 +337,7 @@ export default class GridItem extends React.Component<Props, State> {
           <text x={lockX ? lockX : x} y={lockY ? lockY : y} fill="red">
             {id}
           </text> */}
-          { [
+          {[
             <line
               key="line1"
               y1="0"
@@ -346,9 +346,11 @@ export default class GridItem extends React.Component<Props, State> {
               // x2={lockX ? lockX : x}
               x1={this.props.x}
               x2={this.props.x}
-              style={{stroke: "lightcoral",
-              strokeWidth: 1,
-              strokeDasharray: 5.5}}
+              style={{
+                stroke: "lightcoral",
+                strokeWidth: 1,
+                strokeDasharray: 5.5
+              }}
             />,
             <line
               key="line2"
@@ -358,9 +360,11 @@ export default class GridItem extends React.Component<Props, State> {
               // x2={lockX ? lockX + width : x + width}
               x1={this.props.x + this.props.containerWidth}
               x2={this.props.x + this.props.containerWidth}
-              style={{stroke: "lightcoral",
-              strokeWidth: 1,
-              strokeDasharray: 5.5}}
+              style={{
+                stroke: "lightcoral",
+                strokeWidth: 1,
+                strokeDasharray: 5.5
+              }}
             />,
             <line
               key="line3"
@@ -368,11 +372,13 @@ export default class GridItem extends React.Component<Props, State> {
               x2="1000"
               // y1={lockY ? lockY + height : y + height}
               // y2={lockY ? lockY + height : y + height}
-              y1={this.props.y + this.props.containerHeight}
-              y2={this.props.y + this.props.containerHeight}
-              style={{stroke: "lightcoral",
-              strokeWidth: 1,
-              strokeDasharray: 5.5}}
+              y1={this.props.y + this.props.rowHeight}
+              y2={this.props.y + this.props.rowHeight}
+              style={{
+                stroke: "lightcoral",
+                strokeWidth: 1,
+                strokeDasharray: 5.5
+              }}
             />,
             <line
               key="line4"
@@ -382,9 +388,11 @@ export default class GridItem extends React.Component<Props, State> {
               // y2={lockY ? lockY : y}
               y1={this.props.y}
               y2={this.props.y}
-              style={{stroke: "lightcoral",
-              strokeWidth: 1,
-              strokeDasharray: 5.5}}
+              style={{
+                stroke: "lightcoral",
+                strokeWidth: 1,
+                strokeDasharray: 5.5
+              }}
             />
           ]}
         </g>
